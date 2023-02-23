@@ -3,6 +3,7 @@ package com.auth.authbackend.service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,7 +39,7 @@ public class UserService {
       }
 
       public List<User> getAllUsers(){
-        return userRepo.findAll();
+        return userRepo.findAll().parallelStream().collect(Collectors.toList());
       }
 
 }

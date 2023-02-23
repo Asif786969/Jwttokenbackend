@@ -3,7 +3,6 @@ package com.auth.authbackend;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.auth.authbackend.auth.JwtUtil;
 
 @SpringBootApplication
 public class AuthbackendApplication {
